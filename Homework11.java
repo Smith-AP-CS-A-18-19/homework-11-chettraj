@@ -1,18 +1,21 @@
 import java.util.ArrayList;
 
 public class Homework11 {
+	private ArrayList<Integer> nums;
 
 	/* Finish the constructor and create any necessary instance
 	 * variables. The constructor should create and save an
 	 * ArrayList of int values
 	 */
 	public Homework11() {
+		nums = new ArrayList<Integer>();
+		}
 
-	}
 
 	/* Return the stored ArrayList
 	 */
 	public ArrayList<Integer> getList() {
+		return nums;
 
 	}
 
@@ -20,9 +23,11 @@ public class Homework11 {
 	 * at n and up to, but not including, m. The size of
 	 * the resultant ArrayList should be n - m.
 	 */
-	public void problem1(int n, int m) {
-
+public void problem1(int n, int m){
+	for (int i = n; i < m; i++){
+		nums.add(i);
 	}
+}
 
 	/* Remove from the stored array list all numbers that
 	 * are evenly divisible by n. Remember that when you
@@ -30,6 +35,11 @@ public class Homework11 {
 	 * the right shift their indices down one.
 	 */
 	public void problem2(int n) {
+		for (int i = nums.size() - 1; i >= 0; i--){
+			if (nums.get(i) % n == 0){
+				nums.remove(i);
+			}
+		}
 
 	}
 
